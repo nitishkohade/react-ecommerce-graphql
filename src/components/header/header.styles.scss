@@ -1,0 +1,47 @@
+.header {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+
+
+    .logo-container {
+        display: flex;
+        height: 100%;
+        width: 100px;
+        // padding: 25px;
+
+        .logo-div {
+            // display: flex;
+            font-family: cursive;
+            text-transform: uppercase;
+
+            .logo-text {
+                font-size: 14px;
+                font-weight: 700;
+                background: -webkit-linear-gradient( 45deg, #09009f, #00ff95 80%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                margin: 0px;
+                position: relative;
+                top: 10px;
+            }
+        }
+    }
+
+    .options {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        .option {
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+    }
+
+
+}
