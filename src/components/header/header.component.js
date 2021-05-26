@@ -10,6 +10,8 @@ import { createStructuredSelector } from 'reselect'
 import { selectCartHidden } from '../../redux/cart/cart.selectors'
 import { selectCurrentUser } from '../../redux/user/user.selectors'
 import { HeaderContainer, LogoContainer, LogoDiv, OptionDiv, OptionLink, OptionsContainer, LogoText } from './header.styles'
+import CartIconGraphql from '../cart-icon/cart-icon.graphql'
+import CartDropdownGraphql from '../cart-dropdown/cart-dropdown.graphql'
 
 const Header = ({ currentUser, hidden }) => {
     return (
@@ -52,9 +54,9 @@ const Header = ({ currentUser, hidden }) => {
                             </OptionLink>
                         )
                 }
-                <CartIcon />
+                <CartIconGraphql />
             </OptionsContainer>
-            { hidden ? (<></>) : (<Cart />) }
+            { hidden ? (<></>) : (<CartDropdownGraphql />) }
         </HeaderContainer>
     )
 }
@@ -64,8 +66,7 @@ const Header = ({ currentUser, hidden }) => {
 // })
 
 const mapStateToProps = createStructuredSelector({
-    currentUser: selectCurrentUser, 
-    hidden: selectCartHidden
+    currentUser: selectCurrentUser
 })
 
 export default connect(mapStateToProps)(Header)

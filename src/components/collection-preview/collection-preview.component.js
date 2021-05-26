@@ -1,5 +1,6 @@
 import React from 'react'
 import CollectionItem from '../collection-item/collection-item.component'
+import CollectionItemGraphql from '../collection-item/collection-item.graphql'
 import './collection-preview.styles.scss'
 
 const CollectionPreview = (props) => {
@@ -11,7 +12,7 @@ const CollectionPreview = (props) => {
                 {
                     items.filter((i, index) => index < 4).map(
                         (item) => (
-                        <CollectionItem 
+                        <CollectionItemGraphql 
                             key={item.id} item={item}
                         />)
                     )

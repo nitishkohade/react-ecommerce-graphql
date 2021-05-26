@@ -1,5 +1,6 @@
 import React from 'react'
 import CollectionItem from '../../components/collection-item/collection-item.component'
+import CollectionItemGraphql from '../../components/collection-item/collection-item.graphql'
 import './collection.styles.scss'
 
 const CollectionPage = ({collection}) => {
@@ -9,7 +10,7 @@ const CollectionPage = ({collection}) => {
         <h2 className="title">{title}</h2>
         <div className="items">
             {
-                items.map(item => <CollectionItem key={item.id} item={item}/>)
+                items.map(item => <CollectionItemGraphql key={item.id} item={item}/>)
             }
             </div>
     </div>

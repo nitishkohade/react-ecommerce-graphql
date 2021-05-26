@@ -40,14 +40,4 @@ const CheckoutPage = ({cartItems, total}) => (
     </div>
 )
 
-const mapStateToProps = ({cart: {cartItems}}) => ({
-    cartItems,
-    total: cartItems.reduce((accumulatedPrice, item) => accumulatedPrice + item.price*item.quantity, 0)
-})
-
-const mapDispatchToProps = (dispatch) => ({
-    removeCartItem: (id) => {}
-})
-
-
-export default connect(mapStateToProps, mapDispatchToProps)(CheckoutPage)
+export default CheckoutPage

@@ -15,7 +15,7 @@ import {ApolloClient, gql} from 'apollo-boost'
 import {typeDefs, resolvers} from './graphql/resolvers'
 
 const httpLink = createHttpLink({
-  uri: "https://crwn-clothing.com"
+  uri: ""
 })
 
 const cache = new InMemoryCache()
@@ -29,7 +29,10 @@ const client = new ApolloClient({
 
 client.writeData({
   data: {
-    cartHidden: true
+    cartHidden: true,
+    cartItems: [],
+    itemCount: 0,
+    cartTotal: 0
   }
 })
 

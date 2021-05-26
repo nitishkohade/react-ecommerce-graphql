@@ -12,6 +12,8 @@ import { selectCurrentUser } from './redux/user/user.selectors';
 import { getShopCollecions } from './redux/shop/shop.selectors';
 import { createStructuredSelector } from 'reselect'
 import CheckoutPage from './pages/checkout/checkout.component';
+import HeaderGraphql from './components/header/header.graphql';
+import CheckoutGraphql from './pages/checkout/checkout.graphql';
 
 
 class App extends Component {
@@ -43,11 +45,11 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Header />
+        <HeaderGraphql />
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route path="/shop" component={ShopPage} />
-          <Route exact path="/checkout" component={CheckoutPage} />
+          <Route exact path="/checkout" component={CheckoutGraphql} />
           <Route exact path="/signin" render={() => this.props.currentUser ? (<Redirect to="/" />) : (<SignInAndSignUpPage />) } />
         </Switch>
       </div>
