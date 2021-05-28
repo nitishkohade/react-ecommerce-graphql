@@ -3,13 +3,7 @@ import 'firebase/firestore'
 import 'firebase/auth'
 
 const config = {
-    apiKey: "AIzaSyByjN0mSA-SYB_wYStOm4JbhhhbgIEmNao",
-    authDomain: "modern-cart.firebaseapp.com",
-    projectId: "modern-cart",
-    storageBucket: "modern-cart.appspot.com",
-    messagingSenderId: "545812621008",
-    appId: "1:545812621008:web:37c72a10afc2a80fd3a0d5",
-    measurementId: "G-3PXFZ44M5H"
+
   };
 
   firebase.initializeApp(config)
